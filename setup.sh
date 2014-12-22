@@ -41,3 +41,14 @@ ln -sb dotfiles/.bashrc .
 ln -sb dotfiles/.bashrc_custom .
 ln -sf dotfiles/.emacs.d .
 
+# Install RVM
+sudo apt-get install curl
+\curl -sSL https://get.rvm.io | bash
+source $HOME/.rvm/scripts/rvm
+rvm install 1.9.3
+rvm install 2.1
+rvm use 2.1 --default
+gem install bundler
+
+# Install JavaScript Runtime
+sudo apt-get install nodejs
